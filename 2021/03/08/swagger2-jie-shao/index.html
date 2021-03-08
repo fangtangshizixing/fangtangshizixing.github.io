@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven聚合和继承的关系, 个人博客">
+    <meta name="keywords" content="Swagger2介绍, 个人博客">
     <meta name="description" content="对未来的真正慷慨,是把一切都献给现在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Maven聚合和继承的关系 | Pale blue&#39;S Blog</title>
+    <title>Swagger2介绍 | Pale blue&#39;S Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.png8.com/imgs/2021/03/79bb87015ee4d64a.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.png8.com/imgs/2021/03/8e19d4e2fa8d1ec3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Maven聚合和继承的关系</h1>
+                    <h1 class="description center-align post-title">Swagger2介绍</h1>
                 </div>
             </div>
         </div>
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-23
+                    2021-03-08
                 </div>
                 
 
@@ -462,7 +462,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    633
+                    728
                 </div>
                 
 
@@ -484,47 +484,120 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Maven聚合和继承的关系"><a href="#Maven聚合和继承的关系" class="headerlink" title="Maven聚合和继承的关系"></a>Maven聚合和继承的关系</h1><p>​    虽然聚合模块和父模块经常<strong>合二为一</strong>，但是聚合和继承是两个不同的概念，其实是没有什么关系的。</p>
-<p><strong>聚合模块</strong>知道它聚合了哪些模块，但是被聚合的模块不知道聚合模块的存在；</p>
-<p><strong>父模块</strong>不知道子模块的存在，但是子模块都必须知道自己的父模块是谁。</p>
-<p>可以用下图来表示这两个不同的概念：</p>
-<a id="more"></a>
-
-
-
-<p>补充：可继承的POM元素如下（红色为常用的元素）</p>
+                <h1 id="Swagger2介绍"><a href="#Swagger2介绍" class="headerlink" title="Swagger2介绍"></a>Swagger2介绍</h1><p><a target="_blank" rel="noopener" href="https://swagger.io/">https://swagger.io/</a></p>
+<p>前后端分离开发模式中，api文档是最好的沟通方式。</p>
+<p>Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。</p>
+<p>及时性 (接口变更后，能够及时准确地通知相关前后端开发人员)规范性 (并且保证接口的规范性，如接口的地址，请求方式，参数及响应格式和错误信息)一致性 (接口信息一致，不会出现因开发人员拿到的文档版本不一致，而出现分歧)可测性 (直接在接口文档上进行测试，以方便理解业务)</p>
 <ul>
-<li>groupId：项目组ID，项目坐标的核心元素。</li>
-<li>version：项目版本，项目坐标的核心因素。</li>
-<li>description：项目的描述信息。</li>
-<li>organization：项目的组织信息。</li>
-<li>inceptionYear：项目的创始年份。</li>
-<li>url：项目的URL地址。</li>
-<li>developers：项目的开发者信息。</li>
-<li>contributors：项目的贡献者信息。</li>
-<li>distributionManagement：项目的部署配置。</li>
-<li>issueManagement：项目的缺陷跟踪系统信息。</li>
-<li>ciManagement：项目的持续集成系统信息。</li>
-<li>scm：项目的版本控制系统。</li>
-<li>malilingLists：项目的邮件列表信息。</li>
-<li>properties：自定义的Maven属性。</li>
-<li>dependencies：项目的依赖配置。</li>
-<li>dependencyManagement：项目的依赖管理配置。</li>
-<li>repositories：项目的仓库配置。</li>
-<li>build：包括项目的源码目录配置、输出目录配置、插件配置、插件管理配置等。</li>
-<li>reporting：包括项目的报告输出目录配置、报告插件配置等。</li>
+<li>前端工程师编写接口文档（使用swagger2编辑器或其他接口生成工具）</li>
+<li>交给后端工程师</li>
+<li>根据swagger文档编写后端接口</li>
+<li>最终根据生成的swagger文件进行接口联调</li>
 </ul>
-<p><strong>反应堆</strong></p>
-<p>对于单模块Maven项目而言，反应堆就是整个项目本身。而对于多模块的Maven项目，反应堆是整个项目所有模块组成的一个构建结构，包含模块之间继承与依赖的关系。模块间的依赖关系会将反应堆构成一个有向非循环图。</p>
-<p><strong>裁剪反应堆</strong></p>
-<p>  一般来说，我们要么构建整个项目，要么构建单个模块，但是有些时候，我们会想要仅仅构建这个完整的反应堆中的某些模块，所以我们需要裁剪反应堆。</p>
-<p>  Maven提供的如下几条裁剪反应堆命令：</p>
-<ul>
-<li>-pl –projects：构建指定的模块，多个模块用,分隔，不会构建所列模块的依赖</li>
-<li>-am alse mak：``构建模块同时构建所列模块依赖的其他模块</li>
-<li>-amd alse make dependency：构建模块同时构建依赖当前模块的其他模块</li>
-<li>-rf resume –from：在计算出的反应堆顺序基础上，从指定模块开始向后构建</li>
-</ul>
+<h1 id="二、配置Swagger2"><a href="#二、配置Swagger2" class="headerlink" title="二、配置Swagger2"></a>二、配置Swagger2</h1><h2 id="1、依赖"><a href="#1、依赖" class="headerlink" title="1、依赖"></a>1、依赖</h2><p>common中添加依赖</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>swagger<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>groupId<span class="token operator">></span>io<span class="token punctuation">.</span>springfox<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>springfox<span class="token operator">-</span>swagger2<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">2.7</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+<span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>groupId<span class="token operator">></span>io<span class="token punctuation">.</span>springfox<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>springfox<span class="token operator">-</span>swagger<span class="token operator">-</span>ui<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">2.7</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+</code></pre>
+<h2 id="2、创建Swagger2配置文件"><a href="#2、创建Swagger2配置文件" class="headerlink" title="2、创建Swagger2配置文件"></a>2、创建Swagger2配置文件</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>guli<span class="token punctuation">.</span>service<span class="token punctuation">.</span>base<span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+
+@Configuration
+@EnableSwagger2
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Swagger2Config</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+    @Bean
+    <span class="token keyword">public</span> Docket <span class="token function">webApiConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Docket</span><span class="token punctuation">(</span>DocumentationType<span class="token punctuation">.</span>SWAGGER_2<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">groupName</span><span class="token punctuation">(</span><span class="token string">"webApi"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">apiInfo</span><span class="token punctuation">(</span><span class="token function">webApiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment" spellcheck="true">//只显示api路径下的页面</span>
+                <span class="token punctuation">.</span><span class="token function">paths</span><span class="token punctuation">(</span>Predicates<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span>PathSelectors<span class="token punctuation">.</span><span class="token function">regex</span><span class="token punctuation">(</span><span class="token string">"/api/.*"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    @Bean
+    <span class="token keyword">public</span> Docket <span class="token function">adminApiConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Docket</span><span class="token punctuation">(</span>DocumentationType<span class="token punctuation">.</span>SWAGGER_2<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">groupName</span><span class="token punctuation">(</span><span class="token string">"adminApi"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">apiInfo</span><span class="token punctuation">(</span><span class="token function">adminApiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment" spellcheck="true">//只显示admin路径下的页面</span>
+                <span class="token punctuation">.</span><span class="token function">paths</span><span class="token punctuation">(</span>Predicates<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span>PathSelectors<span class="token punctuation">.</span><span class="token function">regex</span><span class="token punctuation">(</span><span class="token string">"/admin/.*"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> ApiInfo <span class="token function">webApiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ApiInfoBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">"网站-API文档"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">"本文档描述了网站微服务接口定义"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">"1.0"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">contact</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Contact</span><span class="token punctuation">(</span><span class="token string">"Helen"</span><span class="token punctuation">,</span> <span class="token string">"http://atguigu.com"</span><span class="token punctuation">,</span> <span class="token string">"55317332@qq.com"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> ApiInfo <span class="token function">adminApiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ApiInfoBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">"后台管理系统-API文档"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">"本文档描述了后台管理系统微服务接口定义"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">"1.0"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">contact</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Contact</span><span class="token punctuation">(</span><span class="token string">"Helen"</span><span class="token punctuation">,</span> <span class="token string">"http://atguigu.com"</span><span class="token punctuation">,</span> <span class="token string">"55317332@qq.com"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<h2 id="3、重启服务器查看接口"><a href="#3、重启服务器查看接口" class="headerlink" title="3、重启服务器查看接口"></a>3、重启服务器查看接口</h2><p><a target="_blank" rel="noopener" href="http://localhost:8101/swagger-ui.html">http://localhost:端口号/swagger-ui.html</a></p>
+<h1 id="三、常见注解"><a href="#三、常见注解" class="headerlink" title="三、常见注解"></a>三、常见注解</h1><h2 id="1、API模型"><a href="#1、API模型" class="headerlink" title="1、API模型"></a>1、API模型</h2><p>entity的实体类中可以添加一些自定义设置，例如：</p>
+<p>定义样例数据</p>
+<pre class=" language-javascript"><code class="language-javascript">@<span class="token function">ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"入驻时间"</span><span class="token punctuation">,</span> example <span class="token operator">=</span> <span class="token string">"2010-01-01"</span><span class="token punctuation">)</span>
+@<span class="token function">JsonFormat</span><span class="token punctuation">(</span>timezone <span class="token operator">=</span> <span class="token string">"GMT+8"</span><span class="token punctuation">,</span> pattern <span class="token operator">=</span> <span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> Date joinDate<span class="token punctuation">;</span>
+
+@<span class="token function">ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"创建时间"</span><span class="token punctuation">,</span> example <span class="token operator">=</span> <span class="token string">"2019-01-01 8:00:00"</span><span class="token punctuation">)</span>
+@<span class="token function">TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT<span class="token punctuation">)</span>
+<span class="token keyword">private</span> Date gmtCreate<span class="token punctuation">;</span>
+
+@<span class="token function">ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"更新时间"</span><span class="token punctuation">,</span> example <span class="token operator">=</span> <span class="token string">"2019-01-01 8:00:00"</span><span class="token punctuation">)</span>
+@<span class="token function">TableField</span><span class="token punctuation">(</span>fill <span class="token operator">=</span> FieldFill<span class="token punctuation">.</span>INSERT_UPDATE<span class="token punctuation">)</span>
+<span class="token keyword">private</span> Date gmtModified<span class="token punctuation">;</span></code></pre>
+<h2 id="2、定义接口说明和参数说明"><a href="#2、定义接口说明和参数说明" class="headerlink" title="2、定义接口说明和参数说明"></a>2、定义接口说明和参数说明</h2><p>定义在类上：@Api</p>
+<p>定义在方法上：@ApiOperation</p>
+<p>定义在参数上：@ApiParam</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>guli<span class="token punctuation">.</span>service<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>controller<span class="token punctuation">.</span>admin<span class="token punctuation">;</span>
+
+@<span class="token function">Api</span><span class="token punctuation">(</span>description <span class="token operator">=</span> <span class="token string">"讲师管理"</span><span class="token punctuation">)</span>
+@RestController
+@<span class="token function">RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/admin/edu/teacher"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TeacherController</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+    @Autowired
+    <span class="token keyword">private</span> TeacherService teacherService<span class="token punctuation">;</span>
+
+    @<span class="token function">ApiOperation</span><span class="token punctuation">(</span><span class="token string">"所有讲师列表"</span><span class="token punctuation">)</span>
+    @<span class="token function">GetMapping</span><span class="token punctuation">(</span><span class="token string">"list"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Teacher<span class="token operator">></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> teacherService<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+    @<span class="token function">ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"根据ID删除讲师"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据ID删除讲师"</span><span class="token punctuation">)</span>
+    @<span class="token function">DeleteMapping</span><span class="token punctuation">(</span><span class="token string">"remove/&amp;#123;id&amp;#125;"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> boolean <span class="token function">removeById</span><span class="token punctuation">(</span>@<span class="token function">ApiParam</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"讲师ID"</span><span class="token punctuation">,</span> required <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span> @PathVariable String id<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> teacherService<span class="token punctuation">.</span><span class="token function">removeById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 
                 
             </div>
@@ -551,7 +624,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fangtangshizixing.github.io/2020/12/23/ju-he-he-ji-cheng-de-guan-xi/">https://fangtangshizixing.github.io/2020/12/23/ju-he-he-ji-cheng-de-guan-xi/</a>
+                    <a href="https://fangtangshizixing.github.io/2021/03/08/swagger2-jie-shao/">https://fangtangshizixing.github.io/2021/03/08/swagger2-jie-shao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -768,12 +841,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/08/swagger2-jie-shao/">
+                <a href="/2021/03/08/excel-dao-ru-dao-chu-de-ying-yong-chang-jing/">
                     <div class="card-image">
                         
-                        <img src="https://www.png8.com/imgs/2021/03/8e19d4e2fa8d1ec3.jpg" class="responsive-img" alt="Swagger2介绍">
+                        <img src="https://www.png8.com/imgs/2021/03/b267c88f3833e0c9.jpg" class="responsive-img" alt="Excel导入导出的应用场景">
                         
-                        <span class="card-title">Swagger2介绍</span>
+                        <span class="card-title">Excel导入导出的应用场景</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,10 +893,10 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/23/maven/">
+                <a href="/2020/12/23/ju-he-he-ji-cheng-de-guan-xi/">
                     <div class="card-image">
                         
-                        <img src="https://www.png8.com/imgs/2021/03/fc6ef92323cd7638.png" class="responsive-img" alt="Maven聚合和继承的关系">
+                        <img src="https://www.png8.com/imgs/2021/03/79bb87015ee4d64a.jpg" class="responsive-img" alt="Maven聚合和继承的关系">
                         
                         <span class="card-title">Maven聚合和继承的关系</span>
                     </div>
@@ -831,7 +904,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            虽然聚合模块和父模块经常**合二为一**，但是聚合和继承是两个不同的概念
+                            Maven聚合和继承的关系​    虽然聚合模块和父模块经常合二为一，但是聚合和继承是两个不同的概念，其实是没有什么关系的。
+聚合模块知道它聚合了哪些模块，但是被聚合的模块不知道聚合模块的存在；
+父模块不知道子模块的存在，但是子模块都必须知
                         
                     </div>
                     <div class="publish-info">
