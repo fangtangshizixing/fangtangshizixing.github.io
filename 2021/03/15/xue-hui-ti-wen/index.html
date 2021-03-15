@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Excel导入导出的应用场景, 个人博客">
+    <meta name="keywords" content="学会提问, 个人博客">
     <meta name="description" content="对未来的真正慷慨,是把一切都献给现在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Excel导入导出的应用场景 | Pale blue&#39;S Blog</title>
+    <title>学会提问 | Pale blue&#39;S Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.png8.com/imgs/2021/03/b267c88f3833e0c9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.png8.com/imgs/2021/03/90e37b7ee2611cbb.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Excel导入导出的应用场景</h1>
+                    <h1 class="description center-align post-title">学会提问</h1>
                 </div>
             </div>
         </div>
@@ -448,21 +448,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-08
+                    2021-03-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-08
+                    2021-03-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.7k
                 </div>
                 
 
@@ -484,232 +484,71 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Excel导入导出的应用场景"><a href="#Excel导入导出的应用场景" class="headerlink" title="Excel导入导出的应用场景"></a>Excel导入导出的应用场景</h1><h2 id="1、数据导入"><a href="#1、数据导入" class="headerlink" title="1、数据导入"></a>1、数据导入</h2><p>减轻录入工作量</p>
-<h2 id="2、数据导出"><a href="#2、数据导出" class="headerlink" title="2、数据导出"></a>2、数据导出</h2><p>统计信息归档</p>
-<h2 id="3、数据传输"><a href="#3、数据传输" class="headerlink" title="3、数据传输"></a>3、数据传输</h2><p>异构系统之间数据传输</p>
-<h1 id="二、EasyExcel简介"><a href="#二、EasyExcel简介" class="headerlink" title="二、EasyExcel简介"></a>二、EasyExcel简介</h1><h2 id="1、官方网站"><a href="#1、官方网站" class="headerlink" title="1、官方网站"></a>1、官方网站</h2><p><a target="_blank" rel="noopener" href="https://github.com/alibaba/easyexcel">https://github.com/alibaba/easyexcel</a></p>
-<p>快速开始：<a target="_blank" rel="noopener" href="https://www.yuque.com/easyexcel/doc/easyexcel">https://www.yuque.com/easyexcel/doc/easyexcel</a></p>
-<h2 id="2、EasyExcel特点"><a href="#2、EasyExcel特点" class="headerlink" title="2、EasyExcel特点"></a>2、EasyExcel特点</h2><ul>
-<li>Java领域解析、生成Excel比较有名的框架有Apache poi、jxl等。但他们都存在一个严重的问题就是非常的耗内存。如果你的系统并发量不大的话可能还行，但是一旦并发上来后一定会OOM或者JVM频繁的full gc。</li>
-<li>EasyExcel是阿里巴巴开源的一个excel处理框架，<strong>以使用简单、节省内存著称</strong>。EasyExcel能大大减少占用内存的主要原因是在解析Excel时没有将文件数据一次性全部加载到内存中，而是从磁盘上一行行读取数据，逐个解析。</li>
-<li>EasyExcel采用一行一行的解析模式，并将一行的解析结果以观察者的模式通知处理（AnalysisEventListener）。</li>
-</ul>
-<h1 id="二、创建项目"><a href="#二、创建项目" class="headerlink" title="二、创建项目"></a>二、创建项目</h1><h2 id="1、创建一个普通的maven项目"><a href="#1、创建一个普通的maven项目" class="headerlink" title="1、创建一个普通的maven项目"></a>1、创建一个普通的maven项目</h2><p>项目名：alibaba_easyexcel</p>
-<h2 id="2、pom中引入xml相关依赖"><a href="#2、pom中引入xml相关依赖" class="headerlink" title="2、pom中引入xml相关依赖"></a>2、pom中引入xml相关依赖</h2><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>dependencies<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
-        <span class="token operator">&lt;</span>groupId<span class="token operator">></span>com<span class="token punctuation">.</span>alibaba<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
-
-        <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>easyexcel<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">2.1</span><span class="token punctuation">.</span><span class="token number">7</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
-        <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>slf4j<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>slf4j<span class="token operator">-</span>simple<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">1.7</span><span class="token punctuation">.</span><span class="token number">5</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
-        <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>xmlbeans<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>xmlbeans<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">3.1</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
-        <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>projectlombok<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>lombok<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">1.18</span><span class="token punctuation">.</span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
-        <span class="token operator">&lt;</span>groupId<span class="token operator">></span>junit<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>junit<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
-        <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">4.12</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>dependencies<span class="token operator">></span></code></pre>
-<h1 id="二、最简单的写"><a href="#二、最简单的写" class="headerlink" title="二、最简单的写"></a>二、最简单的写</h1><h2 id="1、创建实体类"><a href="#1、创建实体类" class="headerlink" title="1、创建实体类"></a>1、创建实体类</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">.</span>entity<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@Data</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelStudentData</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span><span class="token string">"姓名"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span><span class="token string">"生日"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Date birthday<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span><span class="token string">"薪资"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Double salary<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 忽略这个字段
-     */</span>
-    <span class="token annotation punctuation">@ExcelIgnore</span>
-    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h2 id="2、测试用例"><a href="#2、测试用例" class="headerlink" title="2、测试用例"></a>2、测试用例</h2><ul>
-<li>07版本的Excel和03版本的写入方式有所不同</li>
-<li>03版本的Excel写入最多一次可写65536行</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelWriteTest</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 最简单的写
-     */</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simpleWrite07</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-        String fileName <span class="token operator">=</span> <span class="token string">"d:/excel/01-simpleWrite-07.xlsx"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭</span>
-        EasyExcel<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> ExcelStudentData<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span><span class="token string">"模板"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">doWrite</span><span class="token punctuation">(</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simpleWrite03</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-        String fileName <span class="token operator">=</span> <span class="token string">"d:/excel/01-simpleWrite-03.xls"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 如果这里想使用03 则 传入excelType参数即可</span>
-        EasyExcel<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> ExcelStudentData<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">excelType</span><span class="token punctuation">(</span>ExcelTypeEnum<span class="token punctuation">.</span>XLS<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span><span class="token string">"模板"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">doWrite</span><span class="token punctuation">(</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> List<span class="token operator">&lt;</span>ExcelStudentData<span class="token operator">></span> <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        List<span class="token operator">&lt;</span>ExcelStudentData<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">//算上标题，做多可写65536行</span>
-        <span class="token comment" spellcheck="true">//超出：java.lang.IllegalArgumentException: Invalid row number (65536) outside allowable range (0..65535)</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">65535</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            ExcelStudentData data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ExcelStudentData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Helen"</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">setBirthday</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token number">0.56</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            data<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//即使设置也不会被导出</span>
-            list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">return</span> list<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h1 id="三、指定写入列"><a href="#三、指定写入列" class="headerlink" title="三、指定写入列"></a>三、指定写入列</h1><p>为列配置 index 属性</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">.</span>entity<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@Data</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelStudentData</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"姓名"</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"生日"</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Date birthday<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 这里设置3 会导致第二列空的
-     */</span>
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"薪资"</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Double salary<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 忽略这个字段
-     */</span>
-    <span class="token annotation punctuation">@ExcelIgnore</span>
-    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h1 id="四、自定义格式转换"><a href="#四、自定义格式转换" class="headerlink" title="四、自定义格式转换"></a>四、自定义格式转换</h1><p>配置@DateTimeFormat 和 @NumberFormat</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">.</span>entity<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@Data</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelStudentData</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"姓名"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@DateTimeFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy年MM月dd日HH时mm分ss秒"</span><span class="token punctuation">)</span>
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"生日"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Date birthday<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@NumberFormat</span><span class="token punctuation">(</span><span class="token string">"#.##%"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//百分比表示，保留两位小数</span>
-    <span class="token annotation punctuation">@ExcelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"薪资"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Double salary<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 忽略这个字段
-     */</span>
-    <span class="token annotation punctuation">@ExcelIgnore</span>
-    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h1 id="最简单的读"><a href="#最简单的读" class="headerlink" title="最简单的读"></a>最简单的读</h1><h2 id="1、参考文档"><a href="#1、参考文档" class="headerlink" title="1、参考文档"></a>1、参考文档</h2><p><a target="_blank" rel="noopener" href="https://www.yuque.com/easyexcel/doc/read">https://www.yuque.com/easyexcel/doc/read</a></p>
-<h2 id="2、创建监听器"><a href="#2、创建监听器" class="headerlink" title="2、创建监听器"></a>2、创建监听器</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">.</span>listener<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@Slf4j</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelStudentDataListener</span> <span class="token keyword">extends</span> <span class="token class-name">AnalysisEventListener</span><span class="token operator">&lt;</span>ExcelStudentData<span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 每隔5条存储数据库，实际使用中可以3000条，然后清理list ，方便内存回收
-     */</span>
-
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> BATCH_COUNT <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-
-    List<span class="token operator">&lt;</span>ExcelStudentData<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 这个每一条数据解析都会来调用
-     *
-     * @param data
-     *            one row value. Is is same as &amp;#123;@link AnalysisContext#readRowHolder()&amp;#125;
-     * @param context
-     */</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">invoke</span><span class="token punctuation">(</span>ExcelStudentData data<span class="token punctuation">,</span> AnalysisContext context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"解析到一条数据:&amp;#123;&amp;#125;"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> BATCH_COUNT<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"存数据库"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 存储完成清理 list</span>
-            list<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 所有数据解析完成了 都会来调用
-     *
-     * @param context
-     */</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doAfterAllAnalysed</span><span class="token punctuation">(</span>AnalysisContext context<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"所有数据解析完成！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-<h2 id="3、测试用例"><a href="#3、测试用例" class="headerlink" title="3、测试用例"></a>3、测试用例</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>easyexcel<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExcelReadTest</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 最简单的读
-     */</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simpleRead07</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-        String fileName <span class="token operator">=</span> <span class="token string">"d:/excel/01-simpleWrite-07.xlsx"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 这里默认读取第一个sheet</span>
-        EasyExcel<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> ExcelStudentData<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ExcelStudentDataListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">doRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simpleRead03</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-        String fileName <span class="token operator">=</span> <span class="token string">"d:/excel/01-simpleWrite-03.xls"</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 这里默认读取第一个sheet</span>
-        EasyExcel<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> ExcelStudentData<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ExcelStudentDataListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">excelType</span><span class="token punctuation">(</span>ExcelTypeEnum<span class="token punctuation">.</span>XLS<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">doRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
-
+                <h1 id="学会提问"><a href="#学会提问" class="headerlink" title="学会提问"></a>学会提问</h1><p>上学时期，我们扮演回答者角色的时候居多。但上班后，我们成了<strong>自学者</strong>，不得不学会主动求教别人，可提问得不好，得到的将是一个大白眼或是直截了当的拒绝，更严重的是——对方可能在心中悄悄把你拉入黑名单了。</p>
+<p>所以，我们需要优质提问。*<em>什么是优质提问呢？</em></p>
+<p><strong>能让被问者不假思索就乐意回答，并能为其带来新发现的提问，就是优质提问。</strong></p>
+<p>优质提问的好处当然多多啦！于自身而言，每天向自己“优质提问”,引发行动，就能变得越来越优秀啦！于他人而言，引发别人的新思考和新发现，既帮助了别人，又为自己赢得了良好的人际关系。</p>
+<h4 id="那么如何学会优质提问呢？"><a href="#那么如何学会优质提问呢？" class="headerlink" title="那么如何学会优质提问呢？"></a>那么如何学会优质提问呢？</h4><blockquote>
+<p><strong>1.由“轻松提问”“沉重提问”转变为“优质提问”。</strong></p>
+</blockquote>
+<h5 id="书中把提问以“四象限法”分为四类：优质提问、轻松提问、劣质提问和沉重提问。"><a href="#书中把提问以“四象限法”分为四类：优质提问、轻松提问、劣质提问和沉重提问。" class="headerlink" title="书中把提问以“四象限法”分为四类：优质提问、轻松提问、劣质提问和沉重提问。"></a>书中把提问以“四象限法”分为四类：优质提问、轻松提问、劣质提问和沉重提问。</h5><p>优质提问特点之前已经提过，故不累述。</p>
+<p>轻松提问特点：乐意回答，但无发现。</p>
+<p>劣质提问特点：不愿回答且无发现。</p>
+<p>沉重回答：不愿回答，但有发现。</p>
+<p>“轻松提问”有利于建立良好的关系，是“优质提问”的基础，但要想达到“优质提问”，核心就是“有发现”。</p>
+<p>①.通过“轻松提问”使对方放下心防，与你轻松交谈，建立好的人际关系。</p>
+<p>②.进入“预练期”，询问对方方便透露的自身信息：学校学习的内容、职场积累的经验、曾经的经历等等。当然，“预练期”前最好提前了解下对方，可通过他同事、同学或者个人社交APP。</p>
+<p>③.可以进入“优质提问阶段”：这时可通过询问对方的成功经历，向对方发问：“您觉得你这些年之所以能在商界成为传奇性人物的原因是什么呢？”</p>
+<h4 id="对于“沉重提问”转变成“优质提问”，可以做的是："><a href="#对于“沉重提问”转变成“优质提问”，可以做的是：" class="headerlink" title="对于“沉重提问”转变成“优质提问”，可以做的是："></a>对于“沉重提问”转变成“优质提问”，可以做的是：</h4><p>①.先把让对方不愿回答，引发思考的问题放到一边去，以“轻松提问”开始，开放式提问。</p>
+<p>②.按“轻松提问”的步骤来。</p>
+<blockquote>
+<p><strong>2.交换言外的信息</strong></p>
+</blockquote>
+<p><strong>“言语”本身自然要听，但在此基础上，还有必要注意其“说话方式”和“言语中蕴含的感情”。</strong></p>
+<p>通俗点说，就是要听懂言外之意。</p>
+<p>拿男女朋友聊天为例吧！</p>
+<p>“亲爱的，咱们去吃饭吧！”</p>
+<p>“等下，我打完这一局就走。”</p>
+<p>“好的。”女友甜甜地应道，表明女友没有生气，你可以安心打游戏了。</p>
+<p>但是，当女友的回复是：“好啊，我——等——你。”说话时还伴随着恶狠狠的咬牙切齿的声音，你是不是就该有所觉察呢？不然，估计你的键盘有危险了。</p>
+<blockquote>
+<p><strong>3.提问应顺势而行，现想现问。</strong></p>
+</blockquote>
+<p>当面试前，总会有人不顾现场气氛就开始背之前准备好的自我介绍，这样只会给面试官留下一个不好的印象：“这孩子没有眼力见吗？我还没问，他先说个什么劲啊？”</p>
+<p>事先准备不是完全没有用，这样会使自己更从容地面对他人。但是当别人作出了有深度的回答时，你应该顺势而为，接着提问。</p>
+<p>在倾听对方的回答过程中，也不要忘了记下关键词，以便引出下一个提问。</p>
+<blockquote>
+<h5 id="4-当场思考各种提问的方法关键是学会运用“5W1H”和“3V”"><a href="#4-当场思考各种提问的方法关键是学会运用“5W1H”和“3V”" class="headerlink" title="4.当场思考各种提问的方法关键是学会运用“5W1H”和“3V”"></a><strong>4.当场思考各种提问的方法关键是学会运用“5W1H”和“3V”</strong></h5></blockquote>
+<p><strong>5W1H”对应的是：原因、时间、地点、人物、对象和方法。</strong></p>
+<p><strong>“3V”对应的是：理想、价值、常用词。</strong></p>
+<p>设定一情境，父母对孩子的成绩一落千丈很不满，那么如何规劝孩子好好学习呢？</p>
+<p>①理想（渴望得到的东西）</p>
+<p>“想让孩子的成绩提升到之前的第十名”“想要孩子成绩一直稳定”“想要孩子明白学习的重要性”</p>
+<p>②价值（价值观）</p>
+<p>“聪明”“优秀”“自强独立”“学习认真”</p>
+<p>③词汇</p>
+<p>“目标”“自己满意”“优秀青年”“重要”</p>
+<p>现在把”5W1H”和“3V”合一起提问就是：</p>
+<p>“儿子，为了成绩能够提升到之前的第十名，你认为现在做“什么”是最重要的？</p>
+<p>“儿子，为了成为一个优秀的青年，你认为“谁”是值得你学习的榜样？”</p>
+<p>“儿子，你觉得你什么时候学习能够达到最认真？”</p>
+<p>5.只提问不提建议。</p>
+<p>当对方通过提问，自己获得新发现后，那么他会去行动，这样才能取得更大的进步同时，自己想出来的法子更有成就感，更能记住。</p>
+<p>6.提问应该排除杂音，专注于想问的事。</p>
+<p>①让对方理解你的意思，不要让对方产生误解。</p>
+<p>②不要“别有用心”地提问,常常听到有人拿住话筒，开始显示自己的才华：“曾经XX说过XX，和你现在说的差不多，我认为呢……”接着又开始引经据典，讲了好几分钟后，最后不知道他是提问的额是啥。</p>
+<p>7.对“你”提问</p>
+<p>当你想把问题抛给别人时，不如先问问自己：“我问的这个问题，我自己的想法是怎样的？我会怎么解决这个问题？”这样更有助于问题的解决。</p>
+<blockquote>
+<p><strong>8.以“我”为主语的反馈</strong></p>
+</blockquote>
+<h5 id="当别人回答完你的提问后，一定要给予反馈，显示你很重视他的回答。"><a href="#当别人回答完你的提问后，一定要给予反馈，显示你很重视他的回答。" class="headerlink" title="当别人回答完你的提问后，一定要给予反馈，显示你很重视他的回答。"></a>当别人回答完你的提问后，一定要给予反馈，显示你很重视他的回答。</h5><p><strong>与此同时，要注意区别“客观事实”和“主观事实”。</strong></p>
+<p>这里的“客观事实”是指一个人的说话习惯或特点。</p>
+<p>“主观事实”是指“我听了后的感想。”</p>
+<p>比如，你可以这么反馈：“刚刚我看到你回答我的问题：“你觉得自己是个怎样的人？”时摸了3次鼻子，我认为你有点紧张，我建议你喝点水，不知道有没有误解你呢？“</p>
+<p><strong>其次，不要评判对方回复的好或劣。</strong></p>
+<p>如果你立即给出的反馈是：“你的回答好差劲。”那么，会让对方心里很不舒服，谁也不想自己被否定，同时，对方肯定会对下个提问采取守势，对你设下心防。这样，很不利于下一个提问的进行。</p>
+<h5 id="最后，就是提问前注意选择好时间和场所，为双方愉悦的交谈做好准备。"><a href="#最后，就是提问前注意选择好时间和场所，为双方愉悦的交谈做好准备。" class="headerlink" title="最后，就是提问前注意选择好时间和场所，为双方愉悦的交谈做好准备。"></a>最后，就是提问前注意选择好时间和场所，为双方愉悦的交谈做好准备。</h5>
                 
             </div>
             <hr/>
@@ -735,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fangtangshizixing.github.io/2021/03/08/excel-dao-ru-dao-chu-de-ying-yong-chang-jing/">https://fangtangshizixing.github.io/2021/03/08/excel-dao-ru-dao-chu-de-ying-yong-chang-jing/</a>
+                    <a href="https://fangtangshizixing.github.io/2021/03/15/xue-hui-ti-wen/">https://fangtangshizixing.github.io/2021/03/15/xue-hui-ti-wen/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -948,9 +787,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/15/xue-hui-ti-wen/">
                     <div class="card-image">
@@ -967,9 +807,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -982,6 +822,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1004,12 +845,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/08/swagger2-jie-shao/">
+                <a href="/2021/03/08/excel-dao-ru-dao-chu-de-ying-yong-chang-jing/">
                     <div class="card-image">
                         
-                        <img src="https://www.png8.com/imgs/2021/03/8e19d4e2fa8d1ec3.jpg" class="responsive-img" alt="Swagger2介绍">
+                        <img src="https://www.png8.com/imgs/2021/03/b267c88f3833e0c9.jpg" class="responsive-img" alt="Excel导入导出的应用场景">
                         
-                        <span class="card-title">Swagger2介绍</span>
+                        <span class="card-title">Excel导入导出的应用场景</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
